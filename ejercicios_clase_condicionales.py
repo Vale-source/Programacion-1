@@ -1,8 +1,11 @@
-fecha = [input("Dia de la semana: "),int(input("Numero del dia: ")),int(input("Numero del Mes: "))]
+fecha = input("Ingrese la fecha en formato 'dia de la semana, numero del dia y numero del mes en formato dia, DD/MM: ")
+fecha = fecha.title()
 
-fecha[0] = fecha[0].title()
+dia_semanas = fecha[0:fecha.find(",")]
+dia_numero = int(fecha[fecha.find(" ")+1:fecha.find("/")])
+dia_mes = int(fecha[fecha.find("/")+1:])
 
-if (fecha[0] == "Lunes") or (fecha[0] == "Martes") or (fecha[0] == "Miercoles") and (fecha[1] < 31 and fecha[1] > 0) and (fecha[2] < 12 and fecha[2] > 0 ) :
+if (dia_semanas == "Lunes") or (dia_semanas == "Martes") or (dia_semanas == "Miercoles") and (dia_numero < 31 and dia_numero > 0) and (dia_mes < 12 and dia_mes > 0 ) :
     nivel = input("Ingrese en que nivel se encuentra:")
     nivel = nivel.lower()
 
@@ -16,7 +19,7 @@ if (fecha[0] == "Lunes") or (fecha[0] == "Martes") or (fecha[0] == "Miercoles") 
             total = aprobados + desaprobados
             print("El porcentaje de aprobados fue del: ",round((aprobados*100/total),0),"%")
             
-elif fecha[0] == ("Jueves") and (fecha[1] < 31 and fecha[1] > 0) and (fecha[2] < 12 and fecha[2] > 0 ):
+elif (dia_semanas == "Jueves") and (dia_numero < 31 and dia_numero > 0) and (dia_mes < 12 and dia_mes > 0 ):
     asistencia = int(input("Ingrese el porcentaje de personas que asistieron: "))
 
     if asistencia > 50:
@@ -26,8 +29,7 @@ elif fecha[0] == ("Jueves") and (fecha[1] < 31 and fecha[1] > 0) and (fecha[2] <
     else:
         print("Asistio menos de la mayoria")
 
-elif fecha[0] == ("Viernes") and (fecha[1] == 1) and (fecha[2] == 1 or fecha[2] == 7 ):
-
+elif dia_semanas == ("Viernes") and (dia_numero == 1) and (dia_mes == 1 or dia_mes == 7 ) :
     print("Comienzo de nuevo ciclo")
     alumnos = int(input("Ingrese la cantidad de alumnos nuevos: "))
     arancel = float(input("Ingrese el valor del arancel individual: "))
