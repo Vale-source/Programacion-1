@@ -81,8 +81,8 @@ print("La calificacion final es de: ",calificacion_final)
 #Ejercicio_11
 num1 = float(input("Ingrese el primer numero: "))
 num2 = float(input("Ingrese el segundo numero: "))
-distancia = (num1 - num2)**2
-print("La distancia entre ambos numeros es:",distancia**(1/2))
+distancia = abs(num1 - num2)
+print("La distancia entre ambos numeros es:",distancia)
 
 #Ejercicio_12
 num = 9
@@ -162,7 +162,7 @@ año = int(input("Ingrese el año de su nacimiento: "))
 print("Fecha de nacimiento:",dia,"/",mes,"/",año)
 
 #Ejercicio_20
-fecha_nacimiento = str(dia) + str(mes) + str(año)
+fecha_nacimiento = input("Ingrese su fecha en formato DDMMAAAA: ")
 print("Fecha de nacimiento:",fecha_nacimiento)
 
 #Ejercicio_21
