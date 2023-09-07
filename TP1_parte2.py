@@ -163,7 +163,7 @@ print("Fecha de nacimiento:",dia,"/",mes,"/",año)
 
 #Ejercicio_20
 fecha_nacimiento = input("Ingrese su fecha en formato DDMMAAAA: ")
-print("Fecha de nacimiento:",fecha_nacimiento)
+print(f"Fecha de nacimiento: {fecha_nacimiento[0:2]/{fecha_nacimiento[2:4]}/{fecha_nacimiento[4:]}")
 
 #Ejercicio_21
 litros_kilometro = float(input("Ingrese la cuantos km puede recorrer su moto con 1 litro: "))
