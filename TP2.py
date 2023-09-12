@@ -24,7 +24,7 @@ else:
 
 #Ejercicio 4
 candidatos = ["Candidato A","Candidato B","Candidato C"]
-opc = input("Ingrese un candidato a votar: ")
+opc = input("Eliga un candidato (Candidato A; Candidato B; Candidato C): ")
 opc = opc.title()
 
 if opc == candidatos[0] :
@@ -50,7 +50,7 @@ else :
     print("No se puede procesar el dato")
 
 #Ejercicio 6
-año = 2020
+año = int(input("Ingrese el año que desea conocer si es biciesto o no: "))
 
 if año%4 == 0 :
 
@@ -63,18 +63,18 @@ else:
     print("No es año biciesto")
 
 #Ejercicio 7
-a = float(input("Ingrese el primer numero: "))
-b = float(input("Ingrese el segundo numero: "))
-c = float(input("Ingrese el tercer numero: "))
+num_a = float(input("Ingrese el primer numero: "))
+num_b = float(input("Ingrese el segundo numero: "))
+num_c = float(input("Ingrese el tercer numero: "))
 
-if (a > b) and (a > c):
-    mayor = a
-elif (b > a) and (b > c):
-    mayor = b
-else:
-    mayor = c
+if (num_a < num_b) and (num_a < num_c):
+    menor = num_a
+elif (num_b < num_a) and (num_b < num_c):
+    menor = num_b
+elif (num_c < num_a) and (num_c < num_b):
+    menor = num_c
 
-print(f"El numero mas grande es {mayor}")
+print(f"El numero mas chico es {menor}")
 
 #Ejercicio 8
 ingreso = {"usuario": "Gwenevere", "contraseña" : "excalibur" }
@@ -246,17 +246,17 @@ else:
 #Ejercicio 18
 horas = float(input("Ingrese las horas trabajadas en el mes: "))
 salario = float(input("Ingrese su salario por hora: "))
-sn = input("¿Trabajo horas extras? ")
-sn = sn.lower()
 
-if sn == "no":
-    sueldo = horas*salario
-    print(f"Usted trabajo {horas} horas y su sueldo mensual es de {sueldo}")
-elif sn == "si":
-    horas_extras = float(input("Ingrese las horas extras trabajadas: "))
-    horas_total = horas_extras + horas
-    sueldo = (horas*salario) + (horas_extras*(salario + salario*0.1))
-    print(f"Usted trabajo {horas_total} horas y su sueldo mensual es de {sueldo}")
+salario_comun = horas*salario
+
+if (horas > 48):
+    horas_extras = horas-48
+    salario_extra = horas_extras*(salario + salario*0.1)
+    total = salario_extra + salario_comun
+    print(f"Usted ha ganado: {total}")
+
+elif (horas <= 48):
+    print(f"Usted ha ganado: {salario_comun}")
 
 #Ejercicio 19
 lapices = int(input("Ingrese cuantos lapices compro: "))
