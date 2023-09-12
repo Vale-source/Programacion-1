@@ -55,7 +55,7 @@ while condition == True:
 prime_list = list(prime_list)
 print(f"Los numeros primos ingresados son {prime_list}")
 
-#Exercise 4
+#Exercise 4 (Lo hice con bucle for porque no sabia con cual de los dos bucles nos pedia)
 """year_1 = int(input("Ingrese un año: "))
 year_2 = int(input("Ingrese otro año: "))
 
