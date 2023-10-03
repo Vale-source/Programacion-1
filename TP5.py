@@ -50,7 +50,8 @@ while True:
     if num == 0:
         break
     numbers.append(num)
-Funciones.maxnumber(numbers)
+print(f"El numero mas grande es: {Funciones.maxnumber(numbers)}")
+print(f"El numero mas pequeño es {Funciones.minnumber(numbers)}")
 
 # Exercise 8
 radius = float(input("Ingrese el radio del circulo: "))
