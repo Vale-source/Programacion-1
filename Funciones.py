@@ -42,17 +42,19 @@ def interspace(word):
             word_spaced += i+" "
     return word_spaced
 
-def max_min_number(number):
+def maxnumber(number):
     maxnum = number[0]
     for i in number:
         if i > maxnum:
             maxnum = i
-    
+    return maxnum
+
+def minnumber(number):
     minnum = number[0]
     for i in number:
         if i < minnum:
             minnum = i
-    return print(f"El numero mas grande es: {maxnum}"), print(f"El numero mas pequeño es {minnum}")
+    return minnum
 
 def calculate_area(rad):
     area = round(math.pi * rad**2,2)
