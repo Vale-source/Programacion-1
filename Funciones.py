@@ -1,4 +1,5 @@
 import math
+import random
 def validation(DNI):
     if len(DNI) == 8 or len(DNI) == 7:
         return True
@@ -286,3 +287,9 @@ def diference(list_1, list_2):
     set_list_2 = set(list_2)
     exclusive_list_1 = set_list_1 - set_list_2
     return exclusive_list_1
+
+def print_game(board):
+    for row in board:
+        for col in row:
+            print(col, end="\t")
+        print()
